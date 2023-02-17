@@ -51,12 +51,12 @@ button p {
 main h1,
 h2 {
   color: var(--main-clr);
-  line-height: 1.4rem;
 }
 
 main h1 {
-  margin-top: 1.5rem;
+  margin-top: 6rem;
   font-size: var(--font-title-h1);
+  line-height: 3rem;
 }
 
 main h2 {
@@ -79,6 +79,7 @@ section {
 
 article {
   display: flex;
+  background: inherit;
 }
 
 article:nth-child(odd) {
