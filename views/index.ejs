@@ -1,68 +1,45 @@
 <%- include('./partials/head') %>
-<main class="container-selection">
-  <button class="btn-filter">
-    <div class="btn-title">
+<main>
+  <!-- <img class="background-img"
+    src="https://i.pinimg.com/564x/ae/8a/0c/ae8a0ccbd0fa81e7b314d0e3b1fa7df1.jpg"
+    alt="background clouds" /> -->
+  <div class="container-btn">
+    <button>
       <p>Ambitions</p>
-      <svg></svg>
-    </div>
-  </button>
-
-  <!-- <div class="btn-filter-select">
-    <a href="">Frontend Developer <svg></svg></a>
-    <a href="">Frontend Developer <svg></svg></a>
-    <a href="">Frontend Developer <svg></svg></a>
-    <a href="">Frontend Developer <svg></svg></a>
-    <a href="">Frontend Developer <svg></svg></a>
-    <a href="">Frontend Developer <svg></svg></a>
-  </div> -->
-
-  <div class="container title">
-    <h1>Spot your squat-lead ambitions</h1>
+    </button>
   </div>
 
-  <section class="cotainer-section">
-    <div class="section-content">
-      <div class="content img">
-        <img src="<%- member.avatar %>" alt="student fdnd michelle " />
-      </div>
-      <h1><%- member.name %></h1>
-    </div>
-  </section>
+  <!-- <article class="btn-filter-select">
+    <a href="">Frontend Developer aria-label: <svg></svg></a>
+    <a href="">Frontend Developer <svg></svg></a>
+    <a href="">Frontend Developer <svg></svg></a>
+    <a href="">Frontend Developer <svg></svg></a>
+    <a href="">Frontend Developer <svg></svg></a>
+    <a href="">Frontend Developer <svg></svg></a>
+  </article> -->
 
-  <section class="cotainer-section">
-    <div class="section-content">
-      <div class="content img">
-        <img src="<%- member.avatar %>" alt="student fdnd michelle " />
-      </div>
-      <h1><%- member.name %></h1>
-    </div>
-  </section>
+  <h1>Spot your squat-lead ambitions</h1>
 
-  <section class="cotainer-section">
-    <div class="section-content">
-      <div class="content img">
-        <img src="<%- member.avatar %>" alt="student fdnd michelle " />
+  <section>
+    <!-- members in een foreach loop -->
+    <% squad.members.forEach(member => { %>
+    <article>
+      <!-- Als de member een avatar heeft toegevoegd in de API, wordt deze getoond (true) -->
+      <div class="img-wrapper">
+        <% if (member.avatar) { %>
+        <img
+          class="img-avatar"
+          src="<%= member.avatar %>"
+          alt="De avatar van <%= member.name %>" />
+        <!-- Als de member geen avatar heeft toegevoegd in de API (false), wordt het else-statement uitgevoerd -->
+        <% }else{ %>
+        <img class="img-placeholder" src="/" alt="Placeholder avatar" />
+        <% } %>
+        <h2><%= member.name %></h2>
       </div>
-      <h1><%- member.name %></h1>
-    </div>
-  </section>
+    </article>
 
-  <section class="cotainer-section">
-    <div class="section-content">
-      <div class="content img">
-        <img src="<%- member.avatar %>" alt="student fdnd michelle " />
-      </div>
-      <h1><%- member.name %></h1>
-    </div>
-  </section>
-
-  <section class="cotainer-section">
-    <div class="section-content">
-      <div class="content img">
-        <img src="<%- member.avatar %>" alt="student fdnd michelle " />
-      </div>
-      <h1><%- member.name %></h1>
-    </div>
+    <% }) %>
   </section>
 </main>
 

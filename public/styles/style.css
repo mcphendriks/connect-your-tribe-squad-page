@@ -1,0 +1,110 @@
+:root {
+  --font-title-h1: 32px;
+  --font-h2: 16px;
+  --main-clr: #0900f9;
+  --font-style: arial;
+  --font-weight: 400;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  background: url(/assets/background-clouds.jpeg) no-repeat center center fixed;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-size: cover;
+  min-height: 100%;
+}
+
+main {
+  padding: 2rem 2rem;
+}
+
+button {
+  padding: 30px 30px;
+  background-color: #f6f4e4;
+  border: none;
+  box-shadow: 10px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 100px;
+}
+
+.button::after,
+.button::before {
+  content: "";
+  position: relative;
+  display: inline-block;
+  background: inherit;
+}
+
+button:after {
+}
+
+button:before {
+}
+
+button p {
+  color: var(--main-clr);
+}
+
+main h1,
+h2 {
+  color: var(--main-clr);
+  line-height: 1.4rem;
+}
+
+main h1 {
+  margin-top: 1.5rem;
+  font-size: var(--font-title-h1);
+}
+
+main h2 {
+  font-size: var(--font-h2);
+  margin-top: 1.5rem;
+}
+
+.container-btn {
+  display: flex;
+  justify-content: flex-end;
+  position: fixed;
+  width: 100%;
+  padding-right: 5rem;
+}
+
+section {
+  margin-top: 5rem;
+  border: 1px;
+}
+
+article {
+  display: flex;
+}
+
+article:nth-child(odd) {
+  justify-content: end;
+}
+
+.img-wrapper {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+  background: transparent url(/assets/cloud.png) no-repeat center;
+  background-size: 150%;
+}
+
+.img-avatar {
+  border-radius: 50%;
+  max-width: 10rem;
+  z-index: 1;
+}
+
+/* Screen larger than 600px? 1 column /
+@media (min-width: 400px) {
+  section {
+    grid-template-columns: repeat(2, 1fr);
+  }
+} */
