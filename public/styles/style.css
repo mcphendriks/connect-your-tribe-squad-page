@@ -12,58 +12,41 @@
 }
 
 body {
-  background: url(/assets/background-clouds.jpeg) no-repeat center center fixed;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background: url(https://i.pinimg.com/564x/c0/fd/8e/c0fd8e219cde79fc2a51135ad9cc9f68.jpg)
+    no-repeat center center fixed;
   background-size: cover;
   min-height: 100%;
 }
-
 main {
   padding: 2rem 2rem;
 }
 
-button {
-  padding: 30px 30px;
-  background-color: #f6f4e4;
-  border: none;
-  box-shadow: 10px 10px rgba(0, 0, 0, 0.2);
-  border-radius: 100px;
-}
-
-.button::after,
-.button::before {
-  content: "";
-  position: relative;
-  display: inline-block;
-  background: inherit;
-}
-
-button:after {
-}
-
-button:before {
-}
-
-button p {
-  color: var(--main-clr);
-}
-
 main h1,
-h2 {
+main h2 {
   color: var(--main-clr);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 600;
 }
 
 main h1 {
   margin-top: 6rem;
   font-size: var(--font-title-h1);
   line-height: 3rem;
+  text-transform: uppercase;
+}
+
+main h1:hover {
+  text-shadow: 0 1px 0 #3e49a0, 0 2px 0 #ccc, 0 3px 0 #ccc, 0 4px 0 #ccc,
+    0 5px 0 #ccc, 0 6px 0 #ccc, 0 7px 0 #ccc, 0 8px 0 #ccc, 0 9px 0 #ccc,
+    0 10px 0 #ccc, 0 11px 0 #ccc, 0 12px 0 #ccc, 0 20px 30px rgba(0, 0, 0, 0.5);
 }
 
 main h2 {
-  font-size: var(--font-h2);
-  margin-top: 1.5rem;
+  font-size: 32px;
+  margin-top: 1rem;
 }
 
+/* ACTION BUTTON  */
 .container-btn {
   display: flex;
   justify-content: flex-end;
@@ -72,40 +55,226 @@ main h2 {
   padding-right: 5rem;
 }
 
-section {
-  margin-top: 5rem;
-  border: 1px;
+/* the action-button styling */
+button {
+  padding: 30px 30px;
+  background-color: #f6f4e4;
+  border: none;
+  box-shadow: 10px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 100px;
 }
 
-article {
-  display: flex;
-  background: inherit;
+button p {
+  color: var(--main-clr);
 }
 
-article:nth-child(odd) {
-  justify-content: end;
-}
+/* SLIDE-IN FILTER MENU (CLOUD)*/
 
-.img-wrapper {
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-height: 400px;
-  background: transparent url(/assets/cloud.png) no-repeat center;
-  background-size: 150%;
-}
-
-.img-avatar {
-  border-radius: 50%;
-  max-width: 10rem;
+/* the position off the cloud filter menu  */
+.container-filter-btn {
+  transition: 0.9s; /* 0.5 second transition effect to slide in the sidenav */
+  top: 0;
+  right: 0;
+  position: fixed;
   z-index: 1;
 }
 
-/* Screen larger than 600px? 1 column /
-@media (min-width: 400px) {
-  section {
-    grid-template-columns: repeat(2, 1fr);
+/* the styling and position of the cloud */
+.slide-filter-btn {
+  width: 400px;
+  height: 250px;
+  background-color: #f6f4e4;
+  position: relative; /* Stay in place */
+  padding-top: 60px;
+  border-top-left-radius: 50%;
+  border-bottom-right-radius: 20%;
+  border-bottom-left-radius: 70%;
+  filter: drop-shadow(0 0 0.75rem rgb(8, 22, 223));
+}
+
+.slide-filter-btn::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  background-color: #f6f4e4;
+  height: 80%;
+  bottom: -50px;
+  left: 1%;
+  width: 50%;
+  border-radius: 100px;
+}
+
+.slide-filter-btn:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  background-color: #f6f4e4;
+  width: 230px;
+  height: 310px;
+  bottom: -90px;
+  right: 50px;
+  border-radius: 200px;
+}
+
+/* Menu-filter links */
+.slide-filter-btn a {
+  text-align: center;
+  padding: 1em;
+  text-decoration: none;
+  font-size: var(--font-h2);
+  color: #0900f9;
+  font-weight: 600;
+  display: block;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.slide-filter-btn a:hover {
+  filter: drop-shadow(0 0 0.75rem rgb(70, 79, 196));
+  transition: 0.4s;
+  transform: scale(
+    1.1
+  ); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+/* SECTION MENU  */
+section {
+  margin-top: 5rem;
+}
+
+/* The avatar section */
+
+/* styling img avatar */
+
+.section-content {
+  position: relative;
+  width: 50%;
+  left: 0;
+  top: 0;
+}
+.img-avatar,
+.img-placeholder {
+  border-radius: 60%;
+  width: 8em;
+}
+
+.img-cloud {
+  width: 100%;
+  position: relative;
+  left: 0;
+  top: 0;
+}
+
+.img-avatar,
+.img-placeholder,
+h2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.section-content h2 {
+  margin-top: 6em;
+}
+
+.section-content:nth-child(2n) {
+  margin-left: 50%;
+}
+
+/*SORRY VOOR DE HACK, MAAR KRIJG DE FIRST CHILD NIET GEPOSITIONEERD*/
+.section-content:first-child {
+  margin-left: 50%;
+}
+
+.section-content:hover {
+  transform: scale(1.5);
+}
+
+/* cloud  */
+
+.container-cloud img {
+  height: 8rem;
+  width: 8em;
+  filter: drop-shadow(0 0 0.75rem rgb(65, 74, 199));
+}
+.cloud {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.cloud div {
+  position: absolute;
+  display: block;
+}
+.cloud div:nth-child(1) {
+  left: 20%;
+  animation: fall 15s linear infinite;
+  animation-delay: -2s;
+}
+.cloud div:nth-child(2) {
+  left: 70%;
+  animation: fall 15s linear infinite;
+  animation-delay: -4s;
+}
+.cloud div:nth-child(3) {
+  left: 10%;
+  animation: fall 20s linear infinite;
+  animation-delay: -7s;
+}
+.cloud div:nth-child(4) {
+  left: 50%;
+  animation: fall 18s linear infinite;
+  animation-delay: -5s;
+}
+.cloud div:nth-child(5) {
+  left: 85%;
+  animation: fall 14s linear infinite;
+  animation-delay: -5s;
+}
+.cloud div:nth-child(6) {
+  left: 15%;
+  animation: fall 16s linear infinite;
+  animation-delay: -10s;
+}
+.cloud div:nth-child(7) {
+  left: 90%;
+  animation: fall 15s linear infinite;
+  animation-delay: -4s;
+}
+
+.cloud div:nth-child(8) {
+  left: 20%;
+  animation: fall 15s linear infinite;
+  animation-delay: -2s;
+}
+
+@keyframes fall {
+  0% {
+    opacity: 1;
+    top: -10%;
+    transform: translateX (20px) rotate(0deg);
   }
-} */
+  20% {
+    opacity: 0.8;
+    transform: translateX (-20px) rotate(45deg);
+  }
+  40% {
+    transform: translateX (-20px) rotate(90deg);
+  }
+  60% {
+    transform: translateX (-20px) rotate(135deg);
+  }
+  80% {
+    transform: translateX (-20px) rotate(180deg);
+  }
+  100% {
+    top: 100%;
+    transform: translateX (-20px) rotate(225deg);
+  }
+}
+.cloud1 {
+  transform: rotateX(180deg);
+}

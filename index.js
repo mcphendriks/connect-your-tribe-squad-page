@@ -8,6 +8,10 @@ const data = await fetch(url).then((response) => response.json())
  
 // console.log(data.member)
 
+// Filter interactie voor het openen en sluiten voor de slide in
+
+
+
 // Maak een nieuwe express app aan
 const app = express()
 
@@ -29,12 +33,22 @@ data.squad.members.forEach(function(member) {
 })
 
 
-console.log(data.squad.members)
+
+// console.log(data.squad.members)
 
 // Maak een route voor de index
 app.get('/', function (req, res) {
   // res.send('Hello World!')
-  res.render('index', data)
+  
+  // deep copy 
+  // fuld way 
+  // const filtered = JSON.parse(JSON.stringify(data))
+  const filtered = structuredClone(data)
+
+  if (req.query.ambition) {
+    filtered.squad.members = filtered.squad.members.filter((member) => member.ambition == req.query.ambition)
+  }
+  res.render('index', filtered)
 })
 
 // Stel het poortnummer in waar express op gaat luisteren
@@ -45,3 +59,4 @@ app.listen(app.get('port'), function () {
   // Toon een bericht in de console en geef het poortnummer door
   console.log(`Application started on http://localhost:${app.get('port')}`)
 })
+       
