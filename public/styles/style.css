@@ -22,29 +22,30 @@ body {
   overflow-x: hidden;
 }
 
-main {
+header,
+section {
   padding: 2rem 2rem;
 }
 
-main h1,
-main h2 {
+header h1,
+section h2 {
   color: var(--main-clr);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: 600;
 }
 
-main h1 {
+header h1 {
   margin-top: 6rem;
   font-size: var(--font-title-h1);
   line-height: 3rem;
   text-transform: uppercase;
 }
 
-main h1:hover {
+header h1:hover {
   text-shadow: var(--title-shadow-color);
 }
 
-main h2 {
+section h2 {
   font-size: 32px;
   margin-top: 1rem;
 }

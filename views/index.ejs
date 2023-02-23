@@ -1,5 +1,5 @@
 <%- include('./partials/head') %>
-  <main>
+  <header>
 
     <div class="cloud-btn">
       <button>
@@ -16,67 +16,64 @@
         <a href="/?ambition=Not yet defined" aria-label="filter option not yet difined">Not yet defined</a>
       </div>
     </div>
-
-
-
     <h1>Spot your squat-lead ambitions</h1>
+    <header>
 
-    <section>
-      <!-- members in een foreach loop -->
-      <% squad.members.forEach(member=> { %>
-        <!-- Als de member een avatar heeft toegevoegd in de API, wordt deze getoond (true) -->
-        <% if (member.avatar) { %>
-          <div class="section-content">
-            <img class="img-cloud" src="/assets/cloud.png" alt="background-cloud" />
-            <img class="img-avatar" src="<%= member.avatar %>" alt="De avatar van <%= member.name %>" />
-            <!-- Als de member geen avatar heeft toegevoegd in de API (false), wordt het else-statement uitgevoerd -->
-            <% }else{ %>
-              <img class="img-placeholder" src="/assets/placeholder.png" alt="Placeholder avatar" />
-              <% } %>
-                <h2>
-                  <%= member.name %>
-                </h2>
+      <section>
+        <!-- members in een foreach loop -->
+        <% squad.members.forEach(member=> { %>
+          <!-- Als de member een avatar heeft toegevoegd in de API, wordt deze getoond (true) -->
+          <% if (member.avatar) { %>
+            <div class="section-content">
+              <img class="img-cloud" src="/assets/cloud.png" alt="background-cloud" />
+              <img class="img-avatar" src="<%= member.avatar %>" alt="De avatar van <%= member.name %>" />
+              <!-- Als de member geen avatar heeft toegevoegd in de API (false), wordt het else-statement uitgevoerd -->
+              <% }else{ %>
+                <img class="img-placeholder" src="/assets/placeholder.png" alt="Placeholder avatar" />
+                <% } %>
+                  <h2>
+                    <%= member.name %>
+                  </h2>
+            </div>
+      </section>
+      <% }) %>
+        <!-- Section moving background clouds  -->
+        <section class="animation-clouds">
+
+          <div class="cloud">
+            <div><img src="/assets/cloud.png"></img></div>
+            <div><img src="/assets/cloud.png"></img></div>
+            <div><img src="/assets/cloud.png"></img></div>
+            <div><img src="/assets/cloud.png"></img></div>
+            <div><img src="/assets/cloud.png"></img></div>
+            <div><img src="/assets/cloud.png"></img></div>
+            <div><img src="/assets/cloud.png"></img></div>
           </div>
-    </section>
-    <% }) %>
-      <!-- Section moving background clouds  -->
-      <section class="animation-clouds">
 
-        <div class="cloud">
-          <div><img src="/assets/cloud.png"></img></div>
-          <div><img src="/assets/cloud.png"></img></div>
-          <div><img src="/assets/cloud.png"></img></div>
-          <div><img src="/assets/cloud.png"></img></div>
-          <div><img src="/assets/cloud.png"></img></div>
-          <div><img src="/assets/cloud.png"></img></div>
-          <div><img src="/assets/cloud.png"></img></div>
-        </div>
+          <div class="cloud">
+            <div><img src="/assets/cloud.png"></img></div>
+            <div><img src="/assets/cloud.png"></img></div>
+            <div><img src="/assets/cloud.png"></img></div>
+            <div><img src="/assets/cloud.png"></img></div>
+            <div><img src="/assets/cloud.png"></img></div>
+            <div><img src="/assets/cloud.png"></img></div>
+            <div><img src="/assets/cloud.png"></img></div>
+            <div><img src="/assets/cloud.png"></img></div>
+          </div>
 
-        <div class="cloud">
-          <div><img src="/assets/cloud.png"></img></div>
-          <div><img src="/assets/cloud.png"></img></div>
-          <div><img src="/assets/cloud.png"></img></div>
-          <div><img src="/assets/cloud.png"></img></div>
-          <div><img src="/assets/cloud.png"></img></div>
-          <div><img src="/assets/cloud.png"></img></div>
-          <div><img src="/assets/cloud.png"></img></div>
-          <div><img src="/assets/cloud.png"></img></div>
-        </div>
+          <div class="cloud">
+            <div><img src="/assets/cloud.png"></img></div>
+            <div><img src="/assets/cloud.png"></img></div>
+            <div><img src="/assets/cloud.png"></img></div>
+            <div><img src="/assets/cloud.png"></img></div>
+            <div><img src="/assets/cloud.png"></img></div>
+            <div><img src="/assets/cloud.png"></img></div>
+            <div><img src="/assets/cloud.png"></img></div>
+            <div><img src="/assets/cloud.png"></img></div>
 
-        <div class="cloud">
-          <div><img src="/assets/cloud.png"></img></div>
-          <div><img src="/assets/cloud.png"></img></div>
-          <div><img src="/assets/cloud.png"></img></div>
-          <div><img src="/assets/cloud.png"></img></div>
-          <div><img src="/assets/cloud.png"></img></div>
-          <div><img src="/assets/cloud.png"></img></div>
-          <div><img src="/assets/cloud.png"></img></div>
-          <div><img src="/assets/cloud.png"></img></div>
+          </div>
 
-        </div>
+        </section>
+        </section>
 
-      </section>
-      </section>
-  </main>
-
-  <%- include('./partials/foot') %>
+        <%- include('./partials/foot') %>
