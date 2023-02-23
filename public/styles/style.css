@@ -48,7 +48,7 @@ main h2 {
   margin-top: 1rem;
 }
 
-/* ACTION BUTTON  */
+/* ACTION cloud BUTTON  */
 .cloud-btn {
   display: flex;
   justify-content: flex-end;
@@ -70,7 +70,7 @@ button p {
   color: var(--main-clr);
 }
 
-/* SLIDE-IN FILTER MENU (CLOUD)*/
+/* Slide-in animation cloud filter-menu*/
 /* the position off the cloud filter menu  */
 .cloud-slide-filter {
   transition: 0.9s; /* 0.5 second transition effect to slide in the sidenav */
@@ -117,7 +117,7 @@ button p {
   border-radius: 200px;
 }
 
-/* Menu-filter links */
+/* filter links */
 .slide-filter-content a {
   text-align: center;
   padding: 1em;
@@ -137,7 +137,7 @@ button p {
   ); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 }
 
-/* SECTION MENU  */
+/* SECTION CLOUDS */
 section {
   margin-top: 5rem;
 }
@@ -188,7 +188,7 @@ h2 {
   transform: scale(1.5);
 }
 
-/* cloud  */
+/* MOVING CLOUD ANIMATION  */
 
 .animation-clouds img {
   height: 8rem;
@@ -249,6 +249,7 @@ h2 {
   animation-delay: -2s;
 }
 
+/* keyframes for moving clouds */
 @keyframes fall {
   0% {
     opacity: 1;
