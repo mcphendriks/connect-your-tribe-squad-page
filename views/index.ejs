@@ -1,100 +1,82 @@
 <%- include('./partials/head') %>
-<main>
-  <div class="container-btn">
-    <button>
-      <p>Ambitions</p>
-    </button>
-  </div>
+  <main>
 
-  <div class="container-filter-btn">
-    <div class="slide-filter-btn">
-      <a
-        href="/?ambition=Frontend engineer"
-        aria-label="filter option frontend engineer"
-        >Frontend engineer</a
-      >
-      <a
-        href="/?ambition=HTML/CSS developer"
-        aria-label="filter option HTML/CSS developer"
-        >HTML/CSS developer</a
-      >
-      <a
-        href="/?ambition=Frontend webdesigner"
-        aria-label="filter option Frontendwebdesigner"
-        >Frontend webdesigner</a
-      >
-      <a
-        href="/?ambition=Not yet defined"
-        aria-label="filter option not yet difined"
-        >Not yet defined</a
-      >
+    <div class="cloud-btn">
+      <button>
+        <p>Ambitions</p>
+      </button>
     </div>
-  </div>
 
-  <h1>Spot your squat-lead ambitions</h1>
-
-  <section>
-    <!-- members in een foreach loop -->
-    <% squad.members.forEach(member => { %>
-
-    <!-- Als de member een avatar heeft toegevoegd in de API, wordt deze getoond (true) -->
-    <% if (member.avatar) { %>
-    <div class="section-content">
-      <img class="img-cloud" src="/assets/cloud.png" alt="background-cloud" />
-      <img
-        class="img-avatar"
-        src="<%= member.avatar %>"
-        alt="De avatar van <%= member.name %>" />
-      <!-- Als de member geen avatar heeft toegevoegd in de API (false), wordt het else-statement uitgevoerd -->
-      <% }else{ %>
-      <img
-        class="img-placeholder"
-        src="/assets/placeholder.png"
-        alt="Placeholder avatar" />
-      <% } %>
-      <h2><%= member.name %></h2>
+    <div class="cloud-slide-filter">
+      <div class="slide-filter-content">
+        <a href="/?ambition=Frontend engineer" aria-label="filter option frontend engineer">Frontend engineer</a>
+        <a href="/?ambition=HTML/CSS developer" aria-label="filter option HTML/CSS developer">HTML/CSS developer</a>
+        <a href="/?ambition=Frontend webdesigner" aria-label="filter option Frontendwebdesigner">Frontend
+          webdesigner</a>
+        <a href="/?ambition=Not yet defined" aria-label="filter option not yet difined">Not yet defined</a>
+      </div>
     </div>
-  </section>
-  <% }) %>
 
-  <section class="container-cloud">
-  </div>
-  <div class="cloud">
-   <div><img src="/assets/cloud.png"></img></div> 
-   <div><img src="/assets/cloud.png"></img></div>
-   <div><img src="/assets/cloud.png"></img></div>  
-   <div><img src="/assets/cloud.png"></img></div>  
-   <div><img src="/assets/cloud.png"></img></div>   
-   <div><img src="/assets/cloud.png"></img></div>
-   <div><img src="/assets/cloud.png"></img></div>    
-  </div>
-  
-  <div class="cloud cloud1">
-    <div><img src="/assets/cloud.png"></img></div>
-    <div><img src="/assets/cloud.png"></img></div>
-    <div><img src="/assets/cloud.png" ></img></div>
-    <div><img src="/assets/cloud.png" ></img></div>
-    <div><img src="/assets/cloud.png" ></img></div>
-    <div><img src="/assets/cloud.png"></img></div>
-    <div><img src="/assets/cloud.png" ></img></div>    
-    <div><img src="/assets/cloud.png" ></img></div>   
-  </div>
-  
-  <div class="cloud cloud2">
-    <div><img src="/assets/cloud.png"></img></div>
-    <div><img src="/assets/cloud.png"></img></div>
-    <div><img src="/assets/cloud.png" ></img></div>
-    <div><img src="/assets/cloud.png" ></img></div>
-    <div><img src="/assets/cloud.png" ></img></div>
-    <div><img src="/assets/cloud.png"></img></div>
-    <div><img src="/assets/cloud.png" ></img></div> 
-    <div><img src="/assets/cloud.png" ></img></div> 
-    
-  
-  </div>
-  
-  </section>
-  </section>
-</main>
 
-<%- include('./partials/foot') %>
+
+    <h1>Spot your squat-lead ambitions</h1>
+
+    <section>
+      <!-- members in een foreach loop -->
+      <% squad.members.forEach(member=> { %>
+        <!-- Als de member een avatar heeft toegevoegd in de API, wordt deze getoond (true) -->
+        <% if (member.avatar) { %>
+          <div class="section-content">
+            <img class="img-cloud" src="/assets/cloud.png" alt="background-cloud" />
+            <img class="img-avatar" src="<%= member.avatar %>" alt="De avatar van <%= member.name %>" />
+            <!-- Als de member geen avatar heeft toegevoegd in de API (false), wordt het else-statement uitgevoerd -->
+            <% }else{ %>
+              <img class="img-placeholder" src="/assets/placeholder.png" alt="Placeholder avatar" />
+              <% } %>
+                <h2>
+                  <%= member.name %>
+                </h2>
+          </div>
+    </section>
+    <% }) %>
+      <!-- Section moving background clouds  -->
+      <section class="animation-clouds">
+
+        <div class="cloud">
+          <div><img src="/assets/cloud.png"></img></div>
+          <div><img src="/assets/cloud.png"></img></div>
+          <div><img src="/assets/cloud.png"></img></div>
+          <div><img src="/assets/cloud.png"></img></div>
+          <div><img src="/assets/cloud.png"></img></div>
+          <div><img src="/assets/cloud.png"></img></div>
+          <div><img src="/assets/cloud.png"></img></div>
+        </div>
+
+        <div class="cloud">
+          <div><img src="/assets/cloud.png"></img></div>
+          <div><img src="/assets/cloud.png"></img></div>
+          <div><img src="/assets/cloud.png"></img></div>
+          <div><img src="/assets/cloud.png"></img></div>
+          <div><img src="/assets/cloud.png"></img></div>
+          <div><img src="/assets/cloud.png"></img></div>
+          <div><img src="/assets/cloud.png"></img></div>
+          <div><img src="/assets/cloud.png"></img></div>
+        </div>
+
+        <div class="cloud">
+          <div><img src="/assets/cloud.png"></img></div>
+          <div><img src="/assets/cloud.png"></img></div>
+          <div><img src="/assets/cloud.png"></img></div>
+          <div><img src="/assets/cloud.png"></img></div>
+          <div><img src="/assets/cloud.png"></img></div>
+          <div><img src="/assets/cloud.png"></img></div>
+          <div><img src="/assets/cloud.png"></img></div>
+          <div><img src="/assets/cloud.png"></img></div>
+
+        </div>
+
+      </section>
+      </section>
+  </main>
+
+  <%- include('./partials/foot') %>
