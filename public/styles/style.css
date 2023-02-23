@@ -19,6 +19,7 @@ body {
   background: url(https://i.pinimg.com/564x/c0/fd/8e/c0fd8e219cde79fc2a51135ad9cc9f68.jpg)
     no-repeat center center fixed;
   background-size: cover;
+  overflow-x: hidden;
 }
 
 main {
@@ -146,9 +147,8 @@ section {
 .section-content {
   position: relative;
   width: 50%;
-  left: 0;
-  top: 0;
 }
+
 .img-avatar,
 .img-placeholder {
   border-radius: 60%;
