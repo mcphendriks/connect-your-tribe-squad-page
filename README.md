@@ -1,6 +1,6 @@
 
 # Titel
-Ontwerpen en en bouwen aan een squad page(overzichtspagina) met Node, EJS, Express en data uit de whois.fdnd.nl API voor de opleding FDND.
+Ontwerpen en bouwen aan een squad page(overzichtspagina) met Node, EJS, Express en data uit de whois.fdnd.nl API voor de opleding FDND.
 
 ## Inhoudsopgave
 
