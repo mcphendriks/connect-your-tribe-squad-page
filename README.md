@@ -1,4 +1,3 @@
-> _Fork_ deze leertaak en ga aan de slag. Onderstaande outline ga je gedurende deze taak in jouw eigen GitHub omgeving uitwerken. De instructie vind je in: [docs/INSTRUCTIONS.md](docs/INSTRUCTIONS.md)
 
 # Titel
 Ontwerpen en en bouwen aan een squad page(overzichtspagina) met Node, EJS, Express en data uit de whois.fdnd.nl API voor de opleding FDND.
@@ -37,7 +36,7 @@ Node.js en Express werken samen om een server te bouwen voor het verwerken van b
 
 2. Voer in de terminal het commando npm install uit (Je gebruikt NPM, om een express inclusief alle afhankelijkheden te installeren.
 
-3  Voer in de terminal het commando npm start uit. er verschijnt over het opstarten van de server: Application started on http://localhost:8000, 
+3.  Voer in de terminal het commando npm start uit. er verschijnt over het opstarten van de server: Application started on http://localhost:8000, 
 
 <!-- Bij Installatie staat stap-voor-stap beschreven hoe je de development omgeving moet inrichten om aan de repository te kunnen werken. -->
 
