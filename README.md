@@ -34,7 +34,9 @@ Node.js en Express werken samen om een server te bouwen voor het verwerken van b
 
 ## Installatie Node.js
 1. installeer de Node ontwikkelomgeving, kies 18.14.0 LTS
+
 2. Voer in de terminal het commando npm install uit (Je gebruikt NPM, om een express inclusief alle afhankelijkheden te installeren.
+
 3  Voer in de terminal het commando npm start uit. er verschijnt over het opstarten van de server: Application started on http://localhost:8000, 
 
 <!-- Bij Installatie staat stap-voor-stap beschreven hoe je de development omgeving moet inrichten om aan de repository te kunnen werken. -->
