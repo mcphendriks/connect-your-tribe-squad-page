@@ -1,6 +1,6 @@
 
 # Titel
-Ontwerpen en bouwen aan een squad page(overzichtspagina) met Node, EJS, Express en data uit de whois.fdnd.nl API voor de opleding FDND.
+Ontwerpen en bouwen aan een squad page(overzichtspagina) met Node, EJS, Express en data uit de [whois.fdnd.nl](https://whois.fdnd.nl/) REST API voor de opleiding FDND (sprint 7)
 
 ## Inhoudsopgave
 
